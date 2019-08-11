@@ -1,0 +1,47 @@
+.page-content {
+    .content {
+        margin-bottom: 2rem;
+        .p-title {
+            margin-bottom: 1.5rem;
+        }
+        .page-title {
+            background: #f8fafa;
+            border: 0;
+            box-shadow: 1px 1px lightgray;
+        }
+        .title-contact {
+            color: $mainColor;
+            font-weight: 400;
+        }
+        .note-editor {
+            border: 0;
+            box-shadow: 1px 1px lightgray;
+            .note-editing-area {
+                .note-editable {
+                    background: #f8fafa;
+                }
+            }
+        }
+        .p-content {
+            margin-bottom: 1.5rem;
+        }
+        .p-location {
+            margin-bottom: 3rem;
+        }
+    }
+    .action-buttons {
+        margin-left: 20px;
+        .btn-cancel {
+            width: 100px;
+            background: white;
+            border: 1px solid $mainColor;
+            color: $mainColor;
+        }
+        .btn-save {
+            width: 100px;
+            background: $mainColor;
+            color: white;
+            margin-left: 10px;
+        }
+    }
+}

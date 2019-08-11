@@ -1,0 +1,175 @@
+.content-page {
+    .page-content-section {
+        .view-careers {
+            padding: 5px 20px;
+            flex: 1;
+            .nav-pills {
+                .nav-item {
+                    padding: 0 10px;
+                    margin-bottom: 10px;
+                    @media (max-width: 767px) {
+                        width: 50%;
+                        margin: 0 auto 10px;
+                    }
+                    @media (max-width: 400px) {
+                        min-width: 70%;
+                    }
+                    .nav-link {
+                        border-radius: 30px;
+                        font-size: 16px;
+                        color: #999;
+                        padding: 3px 15px;
+                        margin-top: 1px;
+                        min-width: 100px;
+                        text-align: center;
+                        &.active {
+                            background-color: #FFF;
+                            font-weight: 600;
+                            border: 2px solid $mainColor;
+                            color: $mainColor;
+                            margin-top: 0;
+                        }
+                    }
+                }
+            }
+            .tab-content {
+                .tab-pane {
+                    flex: 1;
+                    padding-top: 30px;
+                    .job {
+                        display: flex;
+                        padding: 30px 0;
+                        margin-bottom: 30px;
+                        background-color: $lGray;
+                        border-radius: 10px;
+                        box-shadow: 0 10px 3px rgba(0, 0, 0, 0.1);
+                        transition: all .1s ease-in;
+                        &:hover {
+                            box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1);
+                        }
+                        @media (max-width: 767px) {
+                            flex-direction: column;
+                        }
+                        .job-logo {
+                            display: flex;
+                            @media (max-width: 767px) {
+                                padding-bottom: 15px;
+                            }
+                            .img-container {
+                                display: flex;
+                                flex-direction: column;
+                                justify-content: center;
+                                @media (max-width: 767px) {
+                                    align-items: flex-start;
+                                    .img-responsive {
+                                        margin: 0;
+                                    }
+                                }
+                            }
+                        }
+                        .job-body {
+                            .header {
+                                .title {
+                                    color: $mainColor;
+                                    font-weight: 900;
+                                    display: inline-block;
+                                }
+                                .details {
+                                    color: #888;
+                                    font-size: 11px;
+                                    letter-spacing: 1px;
+                                }
+                            }
+                            .short-description {
+                                font-size: 12px;
+                                font-weight: 500;
+                                color: $textGray;
+                            }
+                            .apply-button {
+                                @media (min-width: 992px) {
+                                    padding-left: 0;
+                                    margin: 0;
+                                }
+                                margin-top: 20px;
+                                .btn {
+                                    color: #FFF;
+                                    background-color: $mainColor;
+                                    border-radius: 30px;
+                                    padding: 5px 30px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .career-page {
+            .job-head {
+                .header {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    border-bottom: 1px solid #eee;
+                    padding-bottom: 10px;
+                    .title {
+                        margin-bottom: 0;
+                        color: $mainColor;
+                        font-weight: 900;
+                    }
+                    .btn {
+                        color: #FFF;
+                        background-color: $mainColor;
+                        border-radius: 30px;
+                        padding: 8px 40px;
+                        font-weight: 600;
+                        box-shadow: 0 0 5px rgba(0,0,0,.2);
+                        font-size: 14px;
+                    }
+                }
+                .details {
+                    color: #888;
+                    font-size: 12px;
+                    padding-top: 10px;
+                    letter-spacing: 1px;
+                }
+            }
+            .job-table {
+                padding-bottom: 20px;
+                &>div {
+                    overflow-x: auto;
+                }
+                table {
+                    width: 100%;
+                    text-align: center;
+                    tr {
+                        td, th {
+                            border: 1px solid #eee;
+                            padding: 20px;
+                            color: $textGray;
+                            font-size: 16px;
+                        }
+                        th {
+                            font-weight: 500;
+                        }
+                        td {
+                            font-weight: 700;
+                        }
+                    }
+                }
+            }
+            .job-details {
+                padding: 20px 0;
+                .content {
+                    font-size: 16px;
+                    color: $textGray;
+                }
+                .details-title {
+                    font-weight: 900;
+                    color: #777;
+                    margin-bottom: 15px;
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+}

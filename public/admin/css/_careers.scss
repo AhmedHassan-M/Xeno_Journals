@@ -1,0 +1,84 @@
+.app-content {
+    .page-content {
+        .careers-page {
+            .careers-form {
+                display: flex;
+                flex-wrap: wrap;
+                .title {
+                    color: $mainColor;
+                    margin-bottom: 30px;
+                    font-size: 1rem;
+                }
+                input[type="text"], input[type="password"] {
+                    @extend %input;
+                    margin-bottom: 0 !important;
+                }
+                textarea {
+                    @extend %input;
+                    resize: none;
+                    min-height: 150px;
+                    margin-bottom: 0 !important;
+                }
+                select {
+                    @extend %input;
+                    font-size: 14px !important;
+                    margin-bottom: 0 !important;
+                    height: auto;
+                    padding: 8.5px 20px !important;
+                    background: #FFF url("../images/angle-down-solid.svg") no-repeat right 0.75rem center;
+                    background-size: 9px !important;
+                    &:focus {
+                        box-shadow: 0 0 0 rgba(0,0,0,0);
+                    }
+                }
+                .note-editor.note-frame {
+                    border: 1px solid #eee;
+                }
+                .note-editor.note-frame .note-editing-area .note-editable {
+                    background-color: $lGray;
+                    min-height: 150px;
+                }
+                .dropdown-fontname {
+                    bottom: -100px;
+                    overflow-y: auto;
+                }
+                .custom-control {
+                    display: inline-block;
+                    margin-right: 30px;
+                    .custom-control-label {
+                        line-height: 1.5rem;
+                        &::before {
+                            background-color: #FFF;
+                            box-shadow: 0 0 5px rgba(0,0,0,.3);
+                            outline: 0;
+                        }
+                    }
+                }
+                .form-group {
+                    position: relative;
+                    padding-bottom: 40px;
+                    .title {
+                        margin-bottom: 15px;
+                    }
+                    .show-password, .hide-password {
+                        position: absolute;
+                        color: $mainColor;
+                        border-bottom: 1px solid $mainColor;
+                        right: 0;
+                        top: 15px;
+                        cursor: pointer;
+                        font-size: 12px;
+                    }
+                    .validationMsg, .confirmationMsg {
+                        font-size: 12px;
+                        color: #C00;
+                        font-weight: 600;
+                        position: absolute;
+                        bottom: 10px;
+                        padding: 5px;
+                    }
+                }
+            }
+        }
+    }
+}

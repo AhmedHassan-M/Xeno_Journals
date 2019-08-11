@@ -1,0 +1,58 @@
+.app-content {
+    .page-content {
+        .content {
+            .title {
+                color: $mainColor;
+                margin-bottom: 30px;
+                font-size: 1rem;
+            }
+            .text-input {
+                @extend %input;
+                margin-bottom: 0 !important;
+            }
+            .numbers_only_input {
+                border: 0;
+                background: transparent;
+                color: $mainColor;
+                font-weight: 900;
+                font-size: 22px;
+                width: 40px;
+                text-align: center;
+                vertical-align: middle;
+            }
+            .counter-btns {
+                .btn {
+                    padding: 0;
+                    border-radius: 50%;
+                    border: none;
+                    height: 2rem;
+                    background-color: transparent;
+                    opacity: .8;
+                    transition: all .1s linear;
+                    &:hover, &:focus {
+                        box-shadow: none;
+                        transform: translate3d(0, 0, 0);
+                        opacity: 1;
+                    }
+                    i {
+                        font-size: 2rem;
+                    }
+                    &.increase-btn {
+                        margin-left: 10px;
+                        margin-right: 5px;
+                        color: #0A0;
+                    }
+                    &.decrease-btn {
+                        margin-left: 5px;
+                        margin-right: 10px;
+                        color: #F00;
+                    }
+                    &:disabled {
+                        color: #eee;
+                        cursor: default;
+                    }
+                }
+            }
+        }
+    }
+}

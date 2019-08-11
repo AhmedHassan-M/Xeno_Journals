@@ -1,0 +1,163 @@
+.app-content {
+    .page-header {
+        margin-bottom: 25px;
+        h2 {
+            width: 100%;
+            color: $mainColor;
+            font-weight: 900;
+            font-size: 1.4rem;
+        }
+        p {
+            width: 100%;
+            color: $textGray;
+            font-size: 14px;
+        }
+    }
+    .page-content {
+        .page-name {
+            color: $textGray;
+            margin-bottom: 30px;
+        }
+        .content {
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 30px 30px;
+            box-shadow: 0 0 5px rgba(0,0,0,.2);
+            .inside {
+                max-width: 700px;
+                width: 100%;
+                .title {
+                    color: $mainColor;
+                    margin-bottom: 30px;
+                    font-size: 1rem;
+                }
+                input[type="text"], input[type="password"] {
+                    @extend %input;
+                }
+                .note-editor.note-frame {
+                    border: 1px solid #eee;
+                }
+                .note-editor.note-frame .note-editing-area .note-editable {
+                    background-color: $lGray;
+                    min-height: 150px;
+                }
+                .dropdown-fontname {
+                    bottom: -100px;
+                    overflow-y: auto;
+                }
+                .custom-control {
+                    display: inline-block;
+                    margin-right: 30px;
+                    .custom-control-label {
+                        line-height: 1.5rem;
+                        &::before {
+                            background-color: #FFF;
+                            box-shadow: 0 0 5px rgba(0,0,0,.3);
+                            outline: 0;
+                        }
+                    }
+                }
+                .form-group {
+                    position: relative;
+                    padding-bottom: 40px;
+                    .title {
+                        margin-bottom: 15px;
+                    }
+                    .show-password, .hide-password {
+                        position: absolute;
+                        color: $mainColor;
+                        border-bottom: 1px solid $mainColor;
+                        right: 0;
+                        top: 15px;
+                        cursor: pointer;
+                        font-size: 12px;
+                    }
+                    input {
+                        margin-bottom: 0 !important;
+                    }
+                    .validationMsg, .confirmationMsg {
+                        font-size: 12px;
+                        color: #C00;
+                        font-weight: 600;
+                        position: absolute;
+                        bottom: 10px;
+                        padding: 5px;
+                    }
+                }
+            }
+        }
+        .buttons-container {
+            padding: 10px 10px 0 30px;
+            .btn {
+                margin-left: 30px;
+                min-width: 100px;
+                border-radius: 5px;
+            }
+            .btn-cancel {
+                border: 2px solid $mainColor;
+                color: $mainColor;
+                background-color: #fff;
+            }
+        }
+        .all-notification {
+            width: 100%;
+            background: #FFF;
+            border: 3px solid #eee;
+            list-style: none;
+        }
+        .g-row {
+            margin-bottom: 30px;
+        }
+        textarea.styled_textarea {
+            width: 100%;
+            height: 140px;
+            padding: 10px 15px;
+            resize: none;
+            border-radius: 5px;
+            background-color: #F9F9F9;
+            border: 0;
+            box-shadow: 0 2px 3px rgba(0,0,0,.2);
+            &:focus {
+                box-shadow: 0 1px 1px rgba(0,0,0,.3);
+            }
+            &::-webkit-scrollbar-track {
+                -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.1);
+                border-radius: 10px;
+                background-color: #FFF;
+            }
+            &::-webkit-scrollbar {
+                width: 15px;
+                background-color: #FFF;
+            }
+            &::-webkit-scrollbar-thumb {
+                border-radius: 10px;
+                -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.1);
+                background-color: $mainColor;
+                border: 4px solid rgba(0, 0, 0, 0);
+                background-clip: padding-box;
+            }
+            &::-webkit-scrollbar-corner {
+                background-color: transparent;
+            }
+        }
+    }
+}
+.dropdown {
+    .notification_count {
+        position: absolute;
+        display: inline-block;
+        color: #FFF;
+        background-color: #A00;
+        line-height: 15px;
+        height: 15px;
+        width: 15px;
+        text-align: center;
+        border-radius: 50%;
+        font-size: 12px;
+        top: 12px;
+        left: 13px;
+    }
+}
+.note-toolbar-wrapper {
+    min-height: 40px;
+}

@@ -1,0 +1,256 @@
+.app-content {
+    .page-content {
+        .tech-providers-page {
+            .logos {
+                background-color: #fff;
+                border-radius: 10px;
+                padding: 20px 70px 0;
+                margin-bottom: 20px;
+                box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+                .title {
+                    color: $mainColor;
+                    margin-bottom: 30px;
+                    font-size: 1rem;
+                }
+                .logo-item {
+                    .dropify-font-upload:before, .dropify-wrapper .dropify-message span.file-icon:before {
+                        color: $mainColor;
+                    }
+                    .dropify-wrapper {
+                        border: none;
+                        box-shadow: 0 0 5px rgba(0,0,0,.2);
+                        background-color: $lGray;
+                        width: 170px;
+                        margin-bottom: 40px;
+                    }
+                }
+            }
+            .description {
+                background-color: #fff;
+                border-radius: 10px;
+                padding: 20px 70px 0;
+                margin-bottom: 20px;
+                box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+                .title {
+                    color: $mainColor;
+                    margin-bottom: 30px;
+                    font-size: 1rem;
+                }
+                .note-editor.note-frame {
+                    border: 1px solid #eee;
+                    margin-bottom: 40px;
+                }
+                .note-editor.note-frame .note-editing-area .note-editable {
+                    background-color: $lGray;
+                    min-height: 150px;
+                }
+                .dropdown-fontname {
+                    bottom: -100px;
+                    overflow-y: auto;
+                }
+            }
+            .testimonial-slide {
+                background-color: #fff;
+                border-radius: 10px;
+                padding: 0 30px;
+                box-shadow: 0 0 5px rgba(0,0,0,.2);
+                position: relative;
+                margin-bottom: 30px;
+                margin-bottom: 30px;
+                overflow-x: auto;
+                .actions {
+                    position: absolute;
+                    right: 30px;
+                    top: 10px;
+                    background-color: #FFF;
+                    .action-btn {
+                        background: transparent;
+                        border: 0;
+                        outline: 0;
+                        padding: 5px;
+                        cursor: pointer;
+                        opacity: 1;
+                        &:hover {
+                            opacity: .8;
+                        }
+                        img {
+                            height: 30px;
+                        }
+                    }
+                }
+                .dropify-clear {
+                    display: none !important;
+                }
+                table {
+                    width: 100%;
+                    thead {
+                        th {
+                            color: $mainColor;
+                            padding: 20px;
+                            border-bottom: 1px solid #eee;
+                        }
+                    }
+                    tbody {
+                        tr {
+                            td {
+                                padding: 20px 40px 20px 10px;
+                                font-size: 14px;
+                                .dropify-wrapper {
+                                    border: none;
+                                    box-shadow: 0 0 5px rgba(0,0,0,.2);
+                                    background-color: $lGray;
+                                    width: 170px;
+                                    .dropify-preview .dropify-render img {
+                                        // top: 60px;
+                                    }
+                                }
+                                .dropify-wrapper.disabled {
+                                    cursor: default;
+                                    box-shadow: 0 0 0 rgba(0,0,0,0);
+                                    background-color: transparent;
+                                    width: auto;
+                                }
+                                .dropify-wrapper.disabled:hover .dropify-clear, .dropify-wrapper.disabled:hover .dropify-preview .dropify-infos {
+                                    opacity: 0;
+                                }
+                                .dropify-wrapper.disabled input {
+                                    display: none;
+                                }
+                                .dropify-font-upload:before, .dropify-wrapper .dropify-message span.file-icon:before {
+                                    color: $mainColor;
+                                }
+                                textarea {
+                                    height: 150px;
+                                    padding: 10px;
+                                    resize: none;
+                                    overflow-y: -webkit-paged-x;
+                                    color: #aaa;
+                                    font-weight: 500;
+                                    border: 0;
+                                    box-shadow: 0 0 5px rgba(0,0,0,.2);
+                                    background-color: $lGray;
+                                    border-radius: 5px;
+                                    font-size: 12px;
+                                    outline: 0;
+                                    margin-bottom: 0;
+                                    &.title {
+                                        width: 170px;
+                                    }
+                                    &.description {
+                                        width: 300px;
+                                    }
+                                    &.hide-text {
+                                        padding: 10px;
+                                        box-shadow: 0 0 0 rgba(0,0,0,0);
+                                        background-color: transparent;
+
+                                    }
+                                }
+                                .person-info {
+                                    height: 50px;
+                                    width: 170px;
+                                    padding: 10px;
+                                    color: #aaa;
+                                    font-weight: 500;
+                                    border: 0;
+                                    box-shadow: 0 0 5px rgba(0,0,0,.2);
+                                    background-color: $lGray;
+                                    border-radius: 5px;
+                                    font-size: 12px;
+                                    outline: 0;
+                                    margin-top: 10px;
+                                    margin-bottom: 15px;
+                                    &.hide-text {
+                                        padding: 10px;
+                                        box-shadow: 0 0 0 rgba(0,0,0,0);
+                                        background-color: transparent;
+
+                                    }
+                                    &::placeholder {
+                                        color: #aaa;
+                                    }
+                                    &:-ms-input-placeholder {
+                                        color: #aaa;
+                                    }
+                                    &::-ms-input-placeholder {
+                                        color: #aaa;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+// New
+
+
+.logo-item{
+
+    position: relative;
+
+    .edit-tech-providers-item{
+
+        position: absolute;
+        top: 0;
+        background-color: transparent;
+        border: navajowhite;
+        cursor: pointer;
+        z-index: 999;
+
+        &:hover{
+
+
+            box-shadow: none !important;
+
+        }
+
+
+        &:focus{
+
+            box-shadow: none !important;
+
+
+        }
+
+
+
+        i{
+
+            font-size: 24px;
+            color: #4279bd;
+
+        }
+    }
+
+
+}
+
+
+
+.provider-edit-modal{
+
+    width: 100%;    
+
+    .buttons-container{
+
+        text-align: center;
+        padding-bottom: 1rem;
+    }
+
+}
+
+
+.all_logo_image{
+
+    height: 100px;
+    width: 100px;
+    object-fit: contain;
+    object-position: center;
+
+}

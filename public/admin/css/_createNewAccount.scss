@@ -1,0 +1,25 @@
+.btn-create {
+    width: 150px;
+    background: $mainColor;
+    color: white;
+    margin-left: 10px;
+}
+
+.account {
+    margin-bottom: 40px;
+    position: relative;
+    .password-img {
+        width: 15px;
+        position: absolute;
+        right: 10px;
+        bottom: 10px;
+        cursor: pointer;
+    }
+    .message {
+        position: absolute;
+        left: 15px;
+        padding-top: 5px;
+        color: $mainColor;
+        font-weight: bold;
+    }
+}

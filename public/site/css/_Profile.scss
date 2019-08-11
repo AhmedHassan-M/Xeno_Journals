@@ -1,0 +1,316 @@
+.user-profile-page {
+    .page-header-section {
+        background: $mainColor;
+        color: #FFF;
+        position: relative;
+        .header-background {
+            position: absolute;
+            display: flex;
+            overflow-x: hidden;
+            width: 100%;
+            height: 100%;
+            left: 0;
+            top: 0;
+            z-index: 0;
+            background-size: cover;
+            background-position: center;
+            img {
+                width: auto;
+//                width: 100%;
+                min-width: 100%;
+                height: 100%;
+//                display: none;
+            }
+        }
+        .header {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            height: 200px;
+            position: relative;
+            .breadcrumbs {
+                img {
+                    width: 20px;
+                    display: inline-block;
+                    vertical-align: sub;
+                }
+                i {
+                    margin: 0 5px;
+                    font-size: 12px;
+                    cursor: default;
+                }
+                span {
+                    font-size: 11px;
+                    font-weight: 600;
+                    cursor: default;
+                    a {
+                        color: #FFF;
+                    }
+                }
+            }
+            h2 {
+                font-weight: 600;
+                margin-bottom: 0;
+            }
+        }
+    }
+    .page-content-section {
+        padding: 50px 0;
+        background-color: #f9f9f9;
+        .sidebar {
+            flex: 1;
+            border-radius: 0;
+            border-top: 5px solid $mainColor;
+            box-shadow: 0 0 10px rgba(0,0,0,.2);
+            margin-bottom: 50px;
+            background-color: #FFF;
+            .user_identity {
+                padding: 10px 0;
+                .user-img {
+                    padding: 10px 20px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    .img-container {
+                        width: 150px;
+                        height: 150px;
+                        overflow: hidden;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        border-radius: 50%;
+                        img {
+                            max-width: 100%;
+                            max-height: 100%;
+                        }
+                    }
+                }
+                .user-name {
+                    padding: 10px 20px;
+                    color: $mainColor;
+                    font-weight: 600;
+                    text-align: center;
+                }
+            }
+            .nav-link, .side-link {
+                border-top: 1px solid #eee;
+                border-radius: 0;
+                color: $mainColor;
+                text-align: center;
+                display: block;
+                padding: .5rem 1rem;
+                &.active {
+                    background-color: $mainColor;
+                    color: #FFF;
+                }
+                span {
+                    display: inline-block;
+                    font-size: 14px;
+                    padding: 5px 0;
+                }
+            }
+        }
+        .page-content {
+            flex: 1;
+            width: 100%;
+            background-color: #FFF;
+            box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.15);
+            .tab-container {
+                width: 70%;
+                margin: 0 auto;
+                @media (max-width: 768px) {
+                    width: 100%;
+                    min-width: auto;
+                }
+            }
+            .tab-header {
+                padding: 10px 15px;
+                border-bottom: 1px solid #EEE;
+                text-align: center;
+                .title {
+                    color: $mainColor;
+                    font-weight: 600;
+                    margin-bottom: 5px;
+                }
+                .guide-text {
+                    color: #9b9b9b;
+                    font-size: 13px;
+                    margin-bottom: 0;
+                }
+            }
+            .content {
+                padding: 25px 15px;
+                color: $textGray;
+                .new-password-fields {
+                    margin-top: 25px;
+                }
+                .form-group {
+                    margin-bottom: 25px;
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+                    .input {
+                        position: relative;
+                        overflow: hidden;
+                        input {
+                            width: 100%;
+                            padding: 5px 15px;
+                            border: 1px solid #AAA;
+                            border-radius: 3px;
+                            color: $mainColor;
+                            line-height: 23px;
+                            &.current-password {
+                                padding-right: 50px;
+                            }
+                            &::placeholder {
+                                color: #ccc;
+                            }
+                            ::-webkit-input-placeholder {
+                                color: #ccc;
+                            }
+                            ::-ms-input-placeholder {
+                                color: #ccc;
+                            }
+                            &:hover, &:focus {
+                                border-color: $mainColor;
+                            }
+                        }
+                        .new_password_btn {
+                            background-color: #EEE;
+                            border: none;
+                            padding: 5px;
+                            position: absolute;
+                            right: 1px;
+                            top: 1px;
+                            width: 45px;
+                            border-top-right-radius: 4px;
+                            border-bottom-right-radius: 4px;
+                            cursor: pointer;
+                            outline: 0;
+                            img {
+                                max-width: 30px;
+                                max-height: 23px;
+                            }
+                        }
+                        .showPassword {
+                            position: absolute;
+                            right: 1px;
+                            top: 1px;
+                            height: calc(100% - 2px);
+                            width: 35px;
+                            border: 0;
+                            border-top-right-radius: 3px;
+                            border-bottom-right-radius: 3px;
+                            background: transparent;
+                            color: $mainColor;
+                            outline: none;
+                        }
+                    }
+                    .validationMsg {
+                        display: block;
+                        position: relative;
+                        width: 100%;
+                        bottom: 0;
+                        left: 0;
+                        font-size: 10px;
+                        font-weight: 500;
+                        margin: 0;
+                        padding: 0;
+                    }
+                }
+                .preview-container {
+                    padding: 20px;
+                    border: 1px solid #AAA;
+                    border-radius: 5px;
+                    margin-bottom: 20px;
+                    .preview {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        background-color: #F9F9F9;
+                        padding: 20px;
+                        margin-bottom: 20px;
+                        .img-container {
+                            display: flex;
+                            width: 150px;
+                            height: 150px;
+                            border-radius: 50%;
+                            overflow: hidden;
+                            justify-content: center;
+                            align-items: center;
+                            img {
+                                max-width: 100%;
+                                max-height: 100%;
+                            }
+                        }
+                    }
+                    .instructions {
+                        font-size: 12px;
+                        color: #AAA;
+                        p {
+                            margin-bottom: 0;
+                        }
+                    }
+                }
+                .upload-new {
+                    label {
+                        color: $mainColor;
+                        font-size: 16px;
+                        font-weight: 600;
+                        margin-bottom: 10px;
+                    }
+                    .input-file {
+                        border: 1px solid #AAA;
+                        border-radius: 4px;
+                        position: relative;
+                        height: 35px;
+                        overflow: visible;
+                        .input-placeholder {
+                            line-height: 35px;
+                            padding: 0 10px;
+                            color: #CCC;
+                        }
+                        input[type=file] {
+                            display: none;
+                            position: absolute;
+                            top: 0;
+                            right: 0;
+                            width: 200px;
+                            opacity: 0;
+                            cursor: pointer;
+                            z-index: 3;
+                        }
+                        .upload-text {
+                            line-height: 33px;
+                            position: absolute;
+                            right: -1px;
+                            top: -1px;
+                            padding: 0 30px;
+                            display: inline-block;
+                            border: 1px solid $mainColor;
+                            border-top-right-radius: 4px;
+                            border-bottom-right-radius: 4px;
+                            color: $mainColor;
+                            font-weight: 600;
+                            text-align: center;
+                            width: 200px;
+                            cursor: pointer;
+                            font-size: 14px;
+                            margin-bottom: 0;
+                        }
+                    }
+                }
+            }
+            .tab-footer {
+                padding: 10px 15px;
+                border-top: 1px solid #EEE;
+                .save-btn {
+                    background-color: $mainColor;
+                    color: #FFF;
+                    padding: 5px 30px;
+                }
+            }
+        }
+    }
+}

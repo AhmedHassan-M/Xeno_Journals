@@ -1,0 +1,38 @@
+.app-content {
+    .page-content {
+        .content {
+            padding: 30px 30px;
+            padding-bottom: 0;
+        }
+    }
+}
+
+.popular-journals {
+    margin-top: 50px;
+}
+
+.image-download {
+    height: 230px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    .dropify-wrapper {
+        background: #f8fafa;
+        .dropify-message span.file-icon {
+            color: $mainColor;
+        }
+    }
+}
+
+.journal-name {
+    height: 230px;
+    width: 100%;
+    border-radius: 3px;
+    background: #f8fafa;
+    border: 0;
+    padding: 10px 15px;
+    resize: none;
+    color: #444;
+    box-shadow: 0px 0px 3px rgba(0,0,0,.2);
+}

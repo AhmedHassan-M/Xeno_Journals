@@ -1,0 +1,375 @@
+//--------------------------//
+// START REGISTRATION MODAL
+//--------------------------//
+
+#registrationModal {
+    z-index: 10001;
+    background-color: rgba(0,0,0,.4);
+    .modal-dialog {
+        @media (min-width: 650px) {
+            // max-width: 650px;
+            margin: 1rem auto;
+        }
+    }
+    .modal-content {
+        background: transparent;
+        border: 0;
+        .modal-header {
+            flex-direction: column;
+            align-items: center;
+            border: none;
+            .logo {
+                margin-bottom: 10px;
+                img {
+                    height: 65px;
+                    margin-right: 10px;
+                    vertical-align: text-bottom;
+                }
+                span {
+                    font-size: 32px;
+                    color: #FFF;
+                }
+            }
+            .nav-tabs {
+                border: none;
+                .nav-link {
+                    border: 0;
+                    margin: 0 20px;
+                    padding: 0;
+                    color: #FFF;
+                    font-size: 20px;
+                    &.active {
+                        color: #FFF;
+                        font-weight: 700;
+                        background: transparent;
+                        border-bottom: 2px solid;
+                    }
+                }
+            }
+        }
+        .modal-body {
+            background-color: $lGray;
+            border-radius: 5px;
+            padding: 0;
+            .tab-content {
+                .tab-pane {
+                    position: relative;
+                    padding: 20px 0;
+                    &.active {
+                        &#nav-login {
+                            &::before {
+                                content: '';
+                                left: 180px;
+                                @extend %tab-icon;
+                            }
+                        }
+                        &#nav-signup {
+                            &::before {
+                                content: '';
+                                right: 190px;
+                                @extend %tab-icon;
+                            }
+                        }
+                    }
+                    .pane-content {
+                        display: flex;
+                        flex-wrap: wrap;
+                        .social-login {
+                            .linkedin-btn {
+                                background-color: $linkedin;
+                                border-radius: 5px;
+                                color: #FFF;
+                                display: block;
+                                padding: 10px;
+                                opacity: 1;
+                                transition: all .1s linear;
+                                &:hover {
+                                    opacity: .9;
+                                }
+                                img {
+                                    max-width: 30px;
+                                    max-height: 30px;
+                                    margin-right: 30px;
+                                    vertical-align: bottom;
+                                }
+                            }
+                        }
+                        .or {
+                            align-items: center;
+                            padding: 20px 0;
+                            .line {
+                                flex: 1;
+                                height: 1px;
+                                background-color: #DDD;
+                            }
+                            .or-text {
+                                padding: 0 15px;
+                                color: #CCC;
+                                font-weight: 600;
+                                font-size: 18px;
+                            }
+                        }
+                        .form {
+                            .form-group {
+                                label {
+                                    display: block;
+                                    font-size: 18px;
+                                    font-weight: 600;
+                                    color: $mainColor;
+                                }
+                                input {
+                                    padding: 15px 20px;
+                                    border: 0;
+                                    background-color: #FFF;
+                                    width: 100%;
+                                    border-radius: 5px;
+                                    line-height: 25px;
+                                    box-shadow: 2px 2px 3px rgba(0,0,0,.2);
+                                    color: $mainColor;
+                                    &::placeholder {
+                                        color: #CCC;
+                                    }
+                                }
+                                .show-hide-password {
+                                    border: 0;
+                                    background: transparent;
+                                    position: absolute;
+                                    right: 25px;
+                                    bottom: 15px;
+                                    outline: 0;
+                                    img {
+                                        height: 25px;
+                                    }
+                                }
+                                #forgot_password {
+                                    position: absolute;
+                                    right: 0;
+                                    background: transparent;
+                                    border: 0;
+                                    line-height: 25px;
+                                    color: #0B5C9A;
+                                    outline: 0;
+                                    font-size: 16px;
+                                }
+                            }
+                            .submit-btn {
+                                background-color: $mainColor;
+                                border-radius: 5px;
+                                color: #FFF;
+                                display: block;
+                                width: 100%;
+                                padding: 10px;
+                                opacity: 1;
+                                font-size: 18px;
+                                font-weight: 700;
+                                margin-top: 40px;
+                                outline: 0;
+                                transition: all .1s linear;
+                                &:hover {
+                                    opacity: .9;
+                                }
+                            }
+                        }
+                        &#forgot_part {
+                            color: #444;
+                            #back-to-login {
+                                background: transparent;
+                                border: 0;
+                                outline: 0;
+                                font-size: 32px;
+                                vertical-align: middle;
+                                margin-right: 10px;
+                            }
+                            .submit-btn {
+                                margin-top: 10px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+//--------------------------//
+// END REGISTRATION MODAL
+//--------------------------//
+
+//--------------------------//
+// START CONFIRMATION MODAL
+//--------------------------//
+
+#confirmPublishModal {
+    z-index: 10001;
+    background-color: rgba(0,0,0,.4);
+    .modal-dialog {
+        margin: 0 auto;
+        max-width: 800px;
+        .modal-content {
+            .modal-body {
+                h5 {
+                    margin-bottom: 0;
+                }
+            }
+            .modal-footer {
+                .btn-primary {
+                    background-color: $mainColor;
+                    color: #FFF;
+                }
+            }
+        }
+    }
+}
+
+//--------------------------//
+// END CONFIRMATION MODAL
+//--------------------------//
+
+
+
+//--------------------------//
+// START THANKS MODAL
+//--------------------------//
+
+#thanksFormModal {
+    z-index: 10001;
+    background-color: rgba(0,0,0,.4);
+    .modal-dialog {
+        height: 100%;
+        margin: 0 auto;
+        max-width: 800px;
+        .modal-content {
+            height: 100%;
+            background-image: url(../images/bac.png);
+            background-size: 100% 100%;
+            border-radius: 0;
+            .modal-body {
+                display: flex;
+                padding: 30px;
+                .thanks-container {
+                    flex: 1;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-around;
+                    .icon {
+                        img {
+                            width: 100px;
+                        }
+                    }
+                    h2 {
+                        font-weight: 900;
+                        font-size: 3rem;
+                        color: $mainColor;
+                    }
+                    .thanks-text {
+                        font-size: 24px;
+                        text-align: center;
+                        font-weight: 500;
+                        color: $textGray;
+                    }
+                    .button {
+                        padding: 20px;
+                        .btn {
+                            background: transparent;
+                            color: $mainColor;
+                            border: 2px solid $mainColor;
+                            border-radius: 30px;
+                            padding: 12px 35px;
+                            min-width: 300px;
+                            font-size: 22px;
+                            font-weight: 500;
+                            &:hover {
+                                color: #FFF;
+                                background-color: $mainColor;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+//--------------------------//
+// END THANKS MODAL
+//--------------------------//
+
+
+
+//--------------------------//
+// START ERROR MODAL
+//--------------------------//
+
+#errorModal {
+    z-index: 10001;
+    background-color: rgba(0,0,0,.4);
+    .modal-dialog {
+        height: 100%;
+        margin: 0 auto;
+        max-width: 800px;
+        .modal-content {
+            height: 100%;
+            background-image: url(../images/bac.png);
+            background-size: 100% 100%;
+            border-radius: 0;
+            .modal-body {
+                display: flex;
+                padding: 30px;
+                .error-container {
+                    flex: 1;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-around;
+                    .icon {
+                        text-align: center;
+                        .i {
+                            display: inline-block;
+                            color: #FFF;
+                            background-color: #d75a4a;
+                            width: 100px;
+                            height: 100px;
+                            border-radius: 50%;
+                            text-align: center;
+                            font-size: 64px;
+                            i {
+                                line-height: 100px;
+                            }
+                        }
+                    }
+                    h2 {
+                        font-weight: 900;
+                        font-size: 3rem;
+                        color: #d75a4a;
+                    }
+                    .error-text {
+                        font-size: 24px;
+                        text-align: center;
+                        font-weight: 500;
+                        color: $textGray;
+                    }
+                    .button {
+                        padding: 20px;
+                        .btn {
+                            background-color: #d75a4a;
+                            color: #FFF;
+                            border: 2px solid #d75a4a;
+                            border-radius: 30px;
+                            padding: 12px 35px;
+                            min-width: 300px;
+                            font-size: 22px;
+                            font-weight: 500;
+                            &:hover {
+                                color: #d75a4a;
+                                background-color: #FFF;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+//--------------------------//
+// END ERROR MODAL
+//--------------------------//

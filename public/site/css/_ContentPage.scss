@@ -1,0 +1,231 @@
+.content-page {
+    .page-header-section {
+        background: linear-gradient(to right, $secColor, $lightColor);
+        color: #FFF;
+        position: relative;
+        .header-background {
+            position: absolute;
+            overflow-x: hidden;
+            width: 100%;
+            height: 100%;
+            left: 0;
+            top: 0;
+            z-index: 0;
+            background-size: cover;
+            background-position: center;
+            img {
+                width: auto;
+//                width: 100%;
+                min-width: 100%;
+                height: 100%;
+//                display: none;
+            }
+        }
+        .header {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            height: 300px;
+            position: relative;
+            h2 {
+                text-align: center;
+                font-weight: 900;
+                text-transform: uppercase;
+            }
+            .breadcrumbs {
+                position: absolute;
+                left: 0;
+                bottom: 20px;
+                img {
+                    width: 20px;
+                    display: inline-block;
+                    vertical-align: sub;
+                }
+                i {
+                    margin: 0 5px;
+                    font-size: 12px;
+                    cursor: default;
+                }
+                span {
+                    font-size: 11px;
+                    font-weight: 600;
+                    text-transform: uppercase;
+                    cursor: default;
+                    a {
+                        color: #FFF;
+                    }
+                }
+            }
+        }
+    }
+    .page-content-section {
+        padding: 50px 0;
+        .sidebar {
+            flex: 1;
+            border-radius: 20px;
+            border-bottom-right-radius: 0;
+            border-bottom-left-radius: 0;
+            box-shadow: 0 0 10px rgba(0,0,0,.2);
+            margin-bottom: 50px;
+            .side-title {
+                text-align: center;
+                padding: 15px 0;
+                font-weight: 900;
+                margin-bottom: 0;
+                color: $textGray;
+            }
+            .nav-link {
+                border-top: 1px solid #eee;
+                border-radius: 0;
+                color: #ccc;
+                &.active {
+                    background-color: #FFF;
+                    color: $mainColor;
+                }
+                .icon {
+                    width: 20px;
+                    height: 15px;
+                    display: inline-block;
+                    margin-right: 10px;
+                    vertical-align: top;
+                    margin-top: 7px;
+                    img {
+                        max-height: 100%;
+                        max-width: 100%;
+                        display: block;
+                        margin: 0 auto;
+                    }
+                    i {
+                        font-size: 14px;
+                        color: #ccc;
+                    }
+                }
+                &.active i {
+                    color: $mainColor;
+                }
+                span {
+                    display: inline-block;
+                    font-size: 16px;
+                    padding: 5px 0;
+                    max-width: calc(100% - 40px);
+                }
+            }
+        }
+        .page-content {
+            padding: 5px 20px;
+            flex: 1;
+            width: 100%;
+            .title {
+                color: $mainColor;
+                font-weight: 900;
+                padding-bottom: 11px;
+                margin-bottom: 30px;
+                border-bottom: 1px solid #eee;
+                &.title-support {
+                    margin-bottom: 0;
+                }
+            }
+            .content {
+                padding: 20px 0;
+                color: $textGray;
+                font-size: 18px;
+            }
+            .certificate {
+                width: 100%;
+                text-align: center;
+                overflow: hidden;
+                img {
+                    width: 100%;
+                    max-width: 100%;
+                }
+            }
+            .portal-title {
+                font-weight: 900;
+                color: $textGray;
+                margin-bottom: 20px;
+            }
+            .portal-btn {
+                background-color: #fff;
+                color: $mainColor;
+                padding: 10px 40px;
+                min-width: 250px;
+                border-radius: 30px;
+                font-weight: 600;
+                font-size: 16px;
+                border: 2px solid $mainColor;
+                &:hover {
+                    background-color: $mainColor;
+                    color: #fff;
+                }
+            }
+            .management {
+                .person {
+                    text-align: center;
+                    margin-bottom: 30px;
+                    .img-container {
+                        width:175px;
+                        height: 175px;
+                        border-radius: 50%;
+                        margin: 10px auto 20px;
+                        overflow: hidden;
+                        img {
+                            
+                        }
+                    }
+                    .name {
+                        color: $mainColor;
+                        font-weight: 600;
+                        margin-bottom: 15px;
+                    }
+                    .person-title {
+                        color: $textGray;
+                        font-size: 18px;
+                        font-weight: 500;
+                    }
+                }
+            }
+        }
+    }
+    
+    // START CONTACT INCLUDE SECTION
+    .contact-inc-section {
+        background-image: url(../images/ss2.png);
+        background-size: 100% 100%;
+        padding-top: 50px;
+        padding-bottom: 50px;
+        .text-container {
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+            color: #FFF;
+            h2 {
+                font-weight: 900;
+                font-size: 2.2rem;
+                margin-bottom: 20px;
+            }
+            p {
+                font-size: 18px;
+                margin-bottom: 30px;
+            }
+        }
+        .cta {
+            text-align: center;
+            .btn {
+                background-color: transparent;
+                color: #fff;
+                padding: 10px 40px;
+                border-radius: 30px;
+                font-weight: 600;
+                font-size: 18px;
+                border: 2px solid #fff;
+                &:hover {
+                    background-color: #fff;
+                    color: #4553c7;
+                    border: 2px solid #4553c7;
+                }
+            }
+        }
+    }
+    // END CONTACT INCLUDE SECTION
+}

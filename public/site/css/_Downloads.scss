@@ -1,0 +1,130 @@
+.download-page {
+    .page-header-section {
+        background: $mainColor;
+        color: #FFF;
+        position: relative;
+        .header-background {
+            position: absolute;
+            display: flex;
+            overflow-x: hidden;
+            width: 100%;
+            height: 100%;
+            left: 0;
+            top: 0;
+            z-index: 0;
+            background-size: cover;
+            background-position: center;
+            img {
+                width: auto;
+//                width: 100%;
+                min-width: 100%;
+                height: 100%;
+//                display: none;
+            }
+        }
+        .header {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            height: 300px;
+            position: relative;
+            h1 {
+                text-align: center;
+                font-weight: 600;
+            }
+            .breadcrumbs {
+                position: absolute;
+                left: 0;
+                bottom: 20px;
+                img {
+                    width: 20px;
+                    display: inline-block;
+                    vertical-align: sub;
+                }
+                i {
+                    margin: 0 5px;
+                    font-size: 12px;
+                    cursor: default;
+                }
+                span {
+                    font-size: 11px;
+                    font-weight: 600;
+                    cursor: default;
+                    a {
+                        color: #FFF;
+                    }
+                }
+            }
+        }
+    }
+    .page-content-section {
+        background-color: #F9F9F9;
+        padding-top: 50px;
+        padding-bottom: 50px;
+        .page-content {
+            background-color: #FFF;
+            box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.15);
+            .downloads-title {
+                .title {
+                    color: $mainColor;
+                    font-weight: 600;
+                    margin-bottom: 20px;
+                    padding: 15px 15px;
+                    border-bottom: 1px solid $mainColor;
+                }
+                .content {
+                    color: $textGray;
+                    font-size: 18px;
+                    p {
+                        padding: 10px 0 20px;
+                    }
+                }
+            }
+            .download-file {
+                display: flex;
+                padding: 30px 0;
+                margin-bottom: 30px;
+                background-color: $lGray;
+                border-radius: 10px;
+                box-shadow: 0 10px 3px rgba(0, 0, 0, 0.1);
+                transition: all .1s ease-in;
+                &:hover {
+                    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1);
+                }
+                .download-file-logo {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                }
+                .download-file-body {
+                    .header {
+                        .title {
+                            color: $mainColor;
+                            font-weight: 900;
+                            display: inline-block;
+                        }
+                        .details {
+                            color: #888;
+                            font-size: 10px;
+                        }
+                    }
+                    .short-description {
+                        font-size: 12px;
+                        font-weight: 500;
+                        color: $textGray;
+                    }
+                    .apply-button {
+                        padding-left: 0;
+                        .btn {
+                            color: #FFF;
+                            background-color: $mainColor;
+                            border-radius: 30px;
+                            padding: 5px 30px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

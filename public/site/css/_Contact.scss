@@ -1,0 +1,200 @@
+.contact-page {
+    .page-header-section {
+        background: $mainColor;
+        color: #FFF;
+        position: relative;
+        .header-background {
+            position: absolute;
+            display: flex;
+            overflow-x: hidden;
+            width: 100%;
+            height: 100%;
+            left: 0;
+            top: 0;
+            z-index: 0;
+            background-size: cover;
+            background-position: center;
+            img {
+                width: auto;
+//                width: 100%;
+                min-width: 100%;
+                height: 100%;
+//                display: none;
+            }
+        }
+        .header {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            height: 300px;
+            position: relative;
+            h1 {
+                text-align: center;
+                font-weight: 600;
+            }
+            .breadcrumbs {
+                position: absolute;
+                left: 0;
+                bottom: 20px;
+                img {
+                    width: 20px;
+                    display: inline-block;
+                    vertical-align: sub;
+                }
+                i {
+                    margin: 0 5px;
+                    font-size: 12px;
+                    cursor: default;
+                }
+                span {
+                    font-size: 11px;
+                    font-weight: 600;
+                    cursor: default;
+                    a {
+                        color: #FFF;
+                    }
+                }
+            }
+        }
+    }
+    #leafletMap {
+        height: 250px;
+        width: 100%;
+        flex: 1;
+    }
+    .contact-us-section {
+        padding-bottom: 50px;
+        .contact-title {
+            padding-top: 30px;
+            .title {
+                color: $mainColor;
+                font-weight: 900;
+                margin-bottom: 0;
+                flex: 100%;
+            }
+            .content {
+                padding: 20px 0 30px;
+                color: $textGray;
+                font-weight: 400;
+                font-size: 18px;
+                p {
+                    margin-bottom: 0;
+                }
+            }
+        }
+        .contact-info {
+            margin-bottom: 50px;
+            padding-top: 30px;
+            .block {
+                .title {
+                    margin-bottom: 0;
+                    color: $textGray;
+                    font-weight: 600;
+                    width: 100%;
+                    display: inline-block;
+                    font-size: 20px;
+                }
+                .info {
+                    width: 100%;
+                    img {
+                        vertical-align: top;
+                        margin-right: 20px;
+                    }
+                    &>span {
+                        display: inline-block;
+                        width: 250px;
+                        max-width: 80%;
+                        margin-top: -5px;
+                        font-size: 16px;
+                        font-weight: 400;
+                        color: $textGray;
+                    }
+                }
+            }
+        }
+        .form-container {
+            .contact-form {
+                background-color: #FFF;
+                border-radius: 5px;
+                border: 2px solid #CCC;
+                padding: 30px 20px 20px;
+                .sec-title {
+                    border-bottom: 2px solid #aaa;
+                    margin-bottom: 30px;
+                    .title {
+                        color: $mainColor;
+                        font-weight: 900;
+                        margin-bottom: 15px;
+                    }
+                }
+                .questions {
+                    font-size: 18px;
+                    overflow: hidden;
+                    .bootstrap-select {
+                        width: 100%;
+                        .dropdown-toggle {
+                            background-color: #FAFAFA;
+                            box-shadow: 0 0 5px rgba(0,0,0,.3);
+                            outline: 0;
+                            border: 0;
+                            color: #999;
+                            padding: 10px 20px;
+                            font-size: 14px !important;
+                            &:focus {
+                                box-shadow: 0 0 0 rgba(0,0,0,0);
+                                outline: 0;
+                            }
+                        }
+                    }
+                    .form-group {
+                        padding-left: 15px;
+                        margin-bottom: 0;
+                        .input {
+                            flex: 1;
+                            padding: 5px 10px;
+                            input, textarea {
+                                width: 100%;
+                                font-size: 14px;
+                                color: #999;
+                                background-color: #FAFAFA;
+                                border-radius: 5px;
+                                padding: 10px 20px;
+                                border: 0;
+                                outline: 0;
+                                box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+                                &::placeholder {
+                                    color: #999;
+                                }
+                                &:-ms-input-placeholder {
+                                    color: #999;
+                                }
+                                &::-ms-input-placeholder {
+                                    color: #999;
+                                }
+                            }
+                            textarea {
+                                resize: none;
+                                min-height: 150px;
+                                padding: 20px;
+                            }
+                        }
+                    }
+                }
+            }
+            .button {
+                padding: 10px 0 0;
+                .btn {
+                    color: #FFF;
+                    background-color: $mainColor;
+                    border-radius: 5px;
+                    padding: 12px 40px;
+                    box-shadow: 0 0 5px rgba(0,0,0,.2);
+                    &:hover {
+                        box-shadow: 0 0 1px rgba(0,0,0,.3);
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="46px" height="46px" viewBox="0 0 46 46" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49 (51002) - http://www.bohemiancoding.com/sketch -->
+    <title>facebook-logo-in-circular-button-outlined-social-symbol</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="MCS-landing-page" transform="translate(-785.000000, -5778.000000)" fill="#FFFFFF" fill-rule="nonzero">
+            <g id="facebook-logo-in-circular-button-outlined-social-symbol" transform="translate(785.000000, 5778.000000)">
+                <path d="M46,23 C46,10.2976863 35.7022386,0 23,0 C10.2976863,0 0,10.2976863 0,23 C0,35.7022386 10.2976863,46 23,46 C35.7022386,46 46,35.7022386 46,23 Z M2.09089542,23 C2.09089542,11.4518954 11.4518954,2.09089542 23,2.09089542 C34.5481046,2.09089542 43.9091046,11.4518954 43.9091046,23 C43.9091046,34.5481046 34.5481046,43.9091046 23,43.9091046 C11.4518954,43.9091046 2.09089542,34.5481046 2.09089542,23 Z" id="Shape"></path>
+                <path d="M23.8444202,37 L23.8444202,23.4818985 L28.0917737,23.4818985 L28.7628496,19.0021431 L23.8444202,19.0021431 L23.8444202,16.7558744 C23.8444202,15.5869696 24.2093286,14.4712596 25.8069236,14.4712596 L29,14.4712596 L29,10 L24.4668124,10 C20.6553521,10 19.6152865,12.6358526 19.6152865,16.2895983 L19.6152865,19.0000765 L17,19.0000765 L17,23.4818985 L19.6152865,23.4818985 L19.6152865,37 L23.8444202,37 Z" id="Shape"></path>
+            </g>
+        </g>
+    </g>
+</svg>

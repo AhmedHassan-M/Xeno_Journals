@@ -1,0 +1,340 @@
+.hero-section {
+    background-image: url(../images/png/hero-back.png);
+    background-size: 100% 500px;
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    min-height: 700px;
+    .hero-top {
+        align-items: center;
+        justify-content: center;
+        height: 500px;
+        padding: 0;
+        .hero-cta {
+            color: #FFF;
+            flex: 1;
+            h1 {
+                font-size: 48px;
+                margin-bottom: 10px;
+            }
+            p {
+                font-size: 28px;
+                font-weight: 300;
+                margin-bottom: 30px;
+                span {
+                    font-size: 22px;
+                }
+            }
+            .search-form {
+                max-width: 800px;
+                margin: 0 auto;
+                .form-group {
+                    display: flex;
+                    @media (max-width: 575px) {
+                        flex-direction: column;
+                        align-items: center;
+                    }
+                    .search-input {
+                        display: flex;
+                        flex: 1;
+                        position: relative;
+                    }
+                    .bootstrap-select {
+                        width: 180px;
+                        background-color: #f2f5f7;
+                        border-top-left-radius: 5px;
+                        border-bottom-left-radius: 5px;
+                        .btn {
+                            outline: 0;
+                            height: 100%;
+                            &:focus {
+                                outline: 0 !important;
+                                box-shadow: 0 0 0 rgba(0,0,0,0);
+                            }
+                        }
+                        .dropdown-toggle {
+                            &::after {
+                                vertical-align: middle;
+                                content: '\f107';
+                                font-family: "Font Awesome 5 Free";
+                                font-weight: 900;
+                                border: 0;
+                                color: $mainColor;
+                            }
+                            .filter-option {
+                                display: flex;
+                                align-items: center;
+                                .filter-option-inner {
+                                    color: $mainColor;
+                                    font-weight: 600;
+                                    width: 100%;
+                                }
+                            }
+                        }
+                        @media (max-width: 575px) {
+                            width: 100px;
+                            .dropdown-toggle {
+                                padding: 5px;
+                            }
+                        }
+                    }
+                    img {
+                        position: absolute;
+                        max-height: 18px;
+                        bottom: 14px;
+                        &.article-icon {
+                            left: 190px;
+                            @media (max-width: 575px) {
+                                left: 105px;
+                            }
+                        }
+                        &.search-icon {
+                            right: 10px;
+                        }
+                    }
+                    input {
+                        flex: 1;
+                        padding: 10px 40px;
+                        line-height: 25px;
+                        font-size: 14px;
+                        border: 1px;
+                        border-top-right-radius: 5px;
+                        border-bottom-right-radius: 5px;
+                        color: $mainColor;
+                        @media (max-width: 575px) {
+                            padding: 10px 30px;
+                        }
+                    }
+                    .search-btn {
+                        background-color: #FFF;
+                        color: $mainColor;
+                        font-weight: 600;
+                        width: 100px;
+                        margin-left: 10px;
+                        @media (max-width: 575px) {
+                            width: 80px;
+                            margin-top: 20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .hero-about {
+        background-color: #FFF;
+        position: relative;
+        box-shadow: 0 0 15px rgba(0,0,0,.15);
+        top: -50px;
+        padding: 30px 20px;
+        .head {
+            h3 {
+                @extend %title;
+            }
+            p {
+                font-size: 18px;
+                color: #4a4a4a;
+                margin-bottom: 40px;
+                font-weight: 500;
+            }
+        }
+        .block {
+            max-width: 210px;
+            transition: all .2s linear;
+            cursor: default;
+            &:hover {
+                transform: scale(1.1);
+            }
+            @media (max-width: 575px) {
+                max-width: none;
+                margin: 0 auto 30px;
+                text-align: center;
+            }
+            .icon {
+                max-width: 40px;
+                height: 40px;
+                margin-bottom: 20px;
+                @media (max-width: 575px) {
+                    margin: 0 auto 15px;
+                }
+                img {
+                    max-width: 100%;
+                    max-height: 100%;
+                }
+            }
+            h6 {
+                color: #4a4a4a;
+                font-weight: 700;
+            }
+            p {
+                font-weight: 300;
+                color: #4a4a4a;
+                font-size: 14px;
+            }
+        }
+        .browse-all {
+            font-size: 20px;
+            margin: 0 auto;
+            display: inline-block;
+            color: $mainColor;
+        }
+    }
+}
+.landing-popular-section {
+    .popular-journals-section {
+        padding-bottom: 20px;
+        .head {
+            margin-bottom: 20px;
+            h3 {
+                @extend %title;
+            }
+        }
+        .categories {
+            @media (max-width: 767px) {
+                flex-direction: column-reverse;
+            }
+            .category-column {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                .category-item {
+                    margin-bottom: 30px;
+                    a {
+                        display: flex;
+                        overflow: hidden;
+                        position: relative;
+                        transition: all .2s linear;
+                        &:hover {
+                            transform: scale(1.05);
+                        }
+                        &:not(.long) {
+                            height: 250px;
+                            @media (max-width: 991px) {
+                                height: 150px;
+                            }
+                            @media (max-width: 767px) {
+                                height: 400px;
+                            }
+                            @media (max-width: 575px) {
+                                height: 300px;
+                            }
+                        }
+                        &.long {
+                            height: 530px;
+                            @media (max-width: 991px) {
+                                height: 330px;
+                            }
+                            @media (max-width: 767px) {
+                                height: 400px;
+                            }
+                            @media (max-width: 575px) {
+                                height: 300px;
+                            }
+                        }
+                        img {
+                            min-width: 100%;
+                            max-width: 200%;
+                            min-height: 100%;
+                        }
+                        .overlay {
+                            position: absolute;
+                            width: 100%;
+                            height: 100%;
+                            background-color: $mainColor;
+                            opacity: .59;
+                        }
+                        .journal_title {
+                            position: absolute;
+                            left: 0;
+                            bottom: 2px;
+                            width: 100%;
+                            line-height: 25px;
+                            display: block;
+                            font-size: 20px;
+                            text-align: left;
+                            padding: 10px 0 10px 15px;
+                            color: #FFF;
+                            font-family: 'ArialRoundedMT', sans-serif;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .popular-articles-section {
+        padding-bottom: 30px;
+        .head {
+            margin-bottom: 20px;
+            h3 {
+                @extend %title;
+            }
+        }
+        .articles {
+            .article {
+                margin-bottom: 30px;
+                padding: 0 10px;
+                .article-content {
+                    padding: 15px;
+                    background-color: #FFF;
+                    border-radius: 5px;
+                    transition: all .2s linear;
+                    box-shadow: 0 0 5px rgba(0,0,0,.2);
+                    &:hover {
+                        box-shadow: 0 0 1px rgba(0,0,0,.3);
+                    }
+                    .article-category {
+                        font-size: 12px;
+                        color: #AAA;
+                        font-weight: 500;
+                        margin-bottom: 5px;
+                        span {
+                            border-bottom: 1px solid #AAA;
+                            padding-bottom: 5px;
+                        }
+                    }
+                    .article-date {
+                        font-size: 11px;
+                        color: $textGray;
+                        font-weight: 600;
+                        margin-bottom: 5px;
+                    }
+                    .article-title {
+                        font-weight: 700;
+                        color: #444;
+                    }
+                    .article-author {
+                        font-size: 12px;
+                        color: $textGray;
+                        font-weight: 900;
+                        display: flex;
+                        margin-bottom: 10px;
+                        .author-name {
+
+                        }
+                        .line {
+                            border: 1px solid #AAA;
+                            height: 1px;
+                            margin-top: 8px;
+                            margin-left: 3px;
+                            flex: 1;
+                        }
+                    }
+                    .article-excerpt {
+                        font-size: 14px;
+                        line-height: 20px;
+                        height: 140px;
+                        overflow: hidden;
+                        color: #BBB;
+                        margin-bottom: 10px;
+                    }
+                    .article-link {
+                        font-weight: 600;
+                        margin-bottom: 0;
+                        font-size: 14px;
+                        a {
+                            color: $mainColor;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

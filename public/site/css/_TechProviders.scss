@@ -1,0 +1,183 @@
+.tech-providers-page {
+    .tech-providers-section {
+        .tech-title {
+            padding-top: 50px;
+            padding-bottom: 30px;
+            .title {
+                color: $mainColor;
+                font-weight: 900;
+                padding-bottom: 11px;
+                margin-bottom: 0;
+                border-bottom: 1px solid #eee;
+                flex: 1;
+            }
+            .content {
+                padding: 20px 0;
+                color: $textGray;
+                font-size: 18px;
+                width: 100%;
+            }
+        }
+        .logos {
+            margin-bottom: 50px;
+            .logo {
+                margin-bottom: 50px;
+                padding: 0 40px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                height: 80px;
+                transition: all .2s ease-in;
+                &:hover {
+                    img {
+                        transform: scale(1.2);
+                    }
+                }
+                img {
+                    max-height: 80px;
+                    transition: all .2s ease-in;
+                }
+                @media (min-width: 992px) {
+                    -ms-flex: 0 0 20%;
+                    flex: 0 0 20%;
+                    max-width: 20%;
+                    border-right: 1px solid #eee;
+                    &:nth-child(5n) {
+                        border-right: 0;
+                    }
+                }
+                @media (min-width: 768px) and (max-width: 991px) {
+                    border-right: 1px solid #eee;
+                    &:nth-child(4n) {
+                        border-right: 0;
+                    }
+                }
+                @media (min-width: 576px) and (max-width: 767px) {
+                    border-right: 1px solid #eee;
+                    &:nth-child(3n) {
+                        border-right: 0;
+                    }
+                }
+                @media (max-width: 575px) {
+                    -ms-flex: 0 0 50%;
+                    flex: 0 0 50%;
+                    max-width: 50%;
+                    border-right: 1px solid #eee;
+                    &:nth-child(2n) {
+                        border-right: 0;
+                    }
+                }
+            }
+        }
+    }
+    
+    // START TESTIMONIALS SECTION
+    
+    .testimonials-section {
+        .testimonial-title {
+            h4 {
+                color: $mainColor;
+                font-weight: 900;
+            }
+        }
+        .testimonial-slider {
+            margin-bottom: 40px;
+            .slide {
+                display: flex;
+                flex-wrap: wrap;
+                padding: 20px 0;
+                min-height: 300px;
+                .details {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-around;
+                    @media (max-width: 575px) {
+                        flex-direction: row-reverse;
+                        align-items: center;
+                    }
+                    .company {
+                        max-width: 100px;
+                        margin: 0 auto;
+                        .company-logo {
+                            border-radius: 50px;
+//                            border: 1px solid #aaa;
+                            padding: 10px;
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: center;
+                        }
+                    }
+                    .person {
+                        max-width: 150px;
+                        margin: 0 auto;
+                        .person-image {
+                            width: 100px;
+                            margin: 0 auto;
+                            img {
+                                border-radius: 50%;
+                            }
+                        }
+                        .person-info {
+                            color: $textGray;
+                            font-size: 1.3rem;
+                            .person-name {
+                                font-weight: 900;
+                                margin-bottom: 0;
+                            }
+                            .person-title {
+                                margin-bottom: 0;
+                                font-weight: 400;
+                            }
+                        }
+                    }
+                }
+                .text {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    .testimonial-text {
+                        padding: 30px;
+                        font-size: 1.2rem;
+                        color: #444;
+                        position: relative;
+                        &::before {
+                            content: '\f10d';
+                            font-weight: 900;
+                            color: $mainColor;
+                            display: block;
+                            font-size: 1.1rem;
+                            font-family: "Font Awesome 5 Free";
+                            position: absolute;
+                            top: 20px;
+                            left: 0;
+                        }
+                    }
+                }
+            }
+            .owl-dots {
+                position: absolute;
+                width: 100%;
+                bottom: 10px;
+                .owl-dot {
+                    vertical-align: middle;
+                    span {
+                        width: 7px;
+                        height: 7px;
+                        background: #ddd;
+                        margin: 5px 10px;
+                    }
+                    &.active {
+                        span {
+                            width: 12px;
+                            height: 12px;
+                            background: $mainColor;
+                        }
+                    }
+                }
+                button {
+                    outline: 0;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,165 @@
+//--------------------------//
+// START VARIABLES
+//--------------------------//
+
+$mainColor: #0b5c9a; /*#4482cc #4553c7 #2b2dab #2525a5*/
+$lightColor: #4482cc;
+$lGray: #f8fafa;
+$secColor: #2525a5;
+$textGray: #53565a;
+$transition: all 0.1s linear;
+$hsize: 36px;
+$tsize: 18px;
+
+//--------------------------//
+// END VARIABLES
+//--------------------------//
+
+//--------------------------//
+// START IMPORTS
+//--------------------------//
+
+@import "Main";
+@import "contentPage";
+@import "landing";
+@import "careers";
+@import "generalStyle";
+@import "techProviders";
+@import "dataTables";
+@import "generatedDataTables";
+@import "downloads";
+@import "modals";
+@import "auth";
+@import "about";
+@import "contactUsPage";
+@import "homePage";
+// @import "downloadPage";
+@import "createNewAccount";
+
+//--------------------------//
+// END IMPORTS
+//--------------------------//
+//--------------------------//
+// START EXTENDS
+//--------------------------//
+%input {
+    width: 100%;
+    //    border: 1px solid #eee;
+    border: 0;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    background-color: $lGray;
+    color: #888;
+    font-weight: 600;
+    border-radius: 5px;
+    margin-bottom: 40px;
+    font-size: 16px;
+    padding: 7px 20px;
+    outline: 0;
+}
+
+//--------------------------//
+// END EXTENDS
+//--------------------------//
+
+//--------------------------//
+// START GLOBALS
+//--------------------------//
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* For Arabic
+    direction: rtl;
+    text-align: right; */
+}
+body {
+    font-size: 14px;
+    transition: all 0.2s ease;
+    font-family: "Archivo", sans-serif;
+}
+a {
+    &:hover {
+        text-decoration: none;
+    }
+}
+a,
+button,
+input,
+textarea {
+    outline: 0;
+}
+.img-container {
+    .img-responsive {
+        display: block;
+        max-width: 100%;
+        max-height: 100%;
+        width: auto;
+        height: auto;
+        margin: 0 auto;
+    }
+}
+.custom-control-input:checked ~ .custom-control-label::before {
+    color: #fff;
+    background-color: #007bff !important;
+}
+select option[disabled] {
+    display: none;
+}
+
+.form-group {
+    position: relative;
+    .validationMsg {
+        display: block;
+        position: absolute;
+        width: 100%;
+        bottom: 0;
+        left: 0;
+        font-size: 10px;
+        font-weight: 500;
+        margin: 0;
+        padding: 5px;
+        &.red {
+            color: #a00;
+        }
+        &.green {
+            color: #050;
+        }
+    }
+    .not-valid {
+        margin-bottom: 10px !important;
+    }
+}
+.back-msg {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    padding: 5px 0;
+    .help-block {
+        color: #a00;
+    }
+}
+
+.note-editor.note-frame .note-editing-area .note-editable {
+    .dropdown-item {
+        white-space: normal;
+    }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    .h1,
+    .h2,
+    .h3,
+    .h4,
+    .h5,
+    .h6 {
+        font-weight: 500;
+    }
+}
+
+//--------------------------//
+// END GLOBALS
+//--------------------------//

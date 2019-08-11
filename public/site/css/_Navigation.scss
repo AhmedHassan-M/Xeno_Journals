@@ -1,0 +1,1016 @@
+//--------------------------//
+// START SITE NAVBAR
+//--------------------------//
+
+.main-navbar {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    background-color: #FFF;
+    color: $mainColor;
+    font-size: 14px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10000;
+    .ws-nav {
+        position: relative;
+        .ws-nav-container {
+            align-items: center;
+            .logo {
+                max-width: 35%;
+                height: 40px;
+                .img-responsive {
+                    height: 40px;
+                }
+            }
+            .menu {
+                width: 60%;
+                .nav-menu, .nav-actions {
+                    .nav-list {
+                        list-style: none;
+                        margin-bottom: 0;
+                        .nav-item {
+                            display: inline-block;
+                            padding: 0 15px;
+                            button {
+                                width: 160px;
+                            }
+                            .nav-link {
+                                display: block;
+                                background: transparent;
+                                border: 0;
+                                padding: 0;
+                                outline: 0;
+                                color: $mainColor;
+                                font-weight: 600;
+                                padding: 5px 0;
+                                img {
+                                    max-width: 18px;
+                                    max-height: 18px;
+                                    margin-right: 5px;
+                                    vertical-align: text-bottom;
+                                }
+                                &.publish {
+                                    background-color: $mainColor;
+                                    color: #FFF;
+                                    border-radius: 5px;
+                                    padding: 5px 10px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .explore-menu {
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 60px;
+            transition: all .4s ease-in-out;
+            transform-origin: calc(40% + 28px) -25px;
+            background-color: rgba(255,255,255,.9);
+            &::before {
+                content: '\f0d8';
+                font-family: "Font Awesome 5 Free";
+                font-size: 30px;
+                width: 20px;
+                text-align: center;
+                font-weight: 900;
+                display: block;
+                position: absolute;
+                top: -27px;
+                color: rgba(255,255,255,.9);
+                left: calc(40% + 28px);
+            }
+            &.hidden {
+                transform: scale(0,0);
+            }
+            &.shown {
+                transform: scale(1,1);
+            }
+            .title {
+                padding: 15px;
+                margin-bottom: 0;
+                border-bottom: 1px solid $mainColor;
+                color: #333;
+                font-weight: 700;
+            }
+            .explore-menu-item {
+                color: #CCC;
+                background-color: #FFF;
+                border: 0;
+                border-bottom: 1px solid #CCC;
+                text-align: left;
+                padding: 15px;
+                padding-left: 50px;
+                outline: 0;
+                &.show-all {
+                    padding: 8px 8px 8px 50px;
+                    color: $mainColor;
+                }
+                &.active {
+                    border-left: 5px solid $mainColor;
+                    background-color: rgba(11,92,154,.9);
+                    color: #FFF;
+                }
+            }
+            .explore-panes {
+                overflow-y: auto;
+                &::-webkit-scrollbar-track {
+                    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.1);
+                    border-radius: 10px;
+                    background-color: #FFF;
+                }
+
+                &::-webkit-scrollbar {
+                    width: 15px;
+                    background-color: #FFF;
+                }
+
+                &::-webkit-scrollbar-thumb {
+                    border-radius: 10px;
+                    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.1);
+                    background-color: $mainColor;
+                    border: 4px solid rgba(0, 0, 0, 0);
+                    background-clip: padding-box;
+                }
+                &::-webkit-scrollbar-corner {
+                    background-color: transparent;
+                }
+                .pane-item {
+                    display: none;
+                    padding-top: 15px;
+                    padding-bottom: 15px;
+                    &.active {
+                        display: block;
+                    }
+                    .posts-container {
+                        padding: 0 10px;
+                        .post-container {
+                            padding: 0 10px;
+                        }
+                    }
+                    .post-content {
+                        padding: 15px;
+                        background-color: #FFF;
+                        border-radius: 5px;
+                        transition: all .2s linear;
+                        box-shadow: 0 0 10px rgba(0,0,0,.2);
+                        &:hover {
+                            box-shadow: 0 0 2px rgba(0,0,0,.3);
+                        }
+                        .post-category {
+                            font-size: 10px;
+                            color: #AAA;
+                            font-weight: 500;
+                            margin-bottom: 5px;
+                            span {
+                                border-bottom: 1px solid #AAA;
+                                padding-bottom: 5px;
+                            }
+                        }
+                        .post-date {
+                            font-size: 9px;
+                            color: $textGray;
+                            font-weight: 600;
+                            margin-bottom: 5px;
+                        }
+                        .post-title {
+                            font-weight: 700;
+                            color: #444;
+                            font-size: .9rem;
+                        }
+                        .post-author {
+                            font-size: 10px;
+                            color: $textGray;
+                            font-weight: 900;
+                            display: flex;
+                            margin-bottom: 10px;
+                            .author-name {
+
+                            }
+                            .line {
+                                border: 1px solid #AAA;
+                                height: 1px;
+                                margin-top: 7px;
+                                margin-left: 3px;
+                                flex: 1;
+                            }
+                        }
+                        .post-excerpt {
+                            font-size: 12px;
+                            line-height: 14px;
+                            color: #BBB;
+                            margin-bottom: 10px;
+                        }
+                        .post-link {
+                            font-weight: 600;
+                            margin-bottom: 0;
+                            font-size: 12px;
+                            a {
+                                color: $mainColor;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .mb-nav {
+        .mb-nav-container {
+            justify-content: space-between;
+            .burger-menu-btn {
+                background-color: transparent;
+                border: 0;
+                outline: 0;
+                position: relative;
+                left: 0;
+                z-index: 20000;
+                transition: all .3s linear;
+                %bar-style {
+                    width: 30px;
+                    height: 2px;
+                    background-color: #777;
+                    display: block;
+                }
+                .burger-menu-bars {
+                    @extend %bar-style;
+                    position: relative;
+                    transition: all .3s linear;
+                    &::before {
+                        content: '';
+                        @extend %bar-style;
+                        position: absolute;
+                        bottom: 10px;
+                        
+                    }
+                    &::after {
+                        content: '';
+                        @extend %bar-style;
+                        position: absolute;
+                        top: 10px;
+                    }
+                }
+                &.menu-open {
+                    left: 220px;
+                    @media (max-width: 650px) {
+                        left: 270px;
+                    }
+                    .burger-menu-bars {
+                        height: 0;
+                        &::before {
+                            transform: rotate(45deg);
+                            top: 0;
+                            bottom: 0;
+                        }
+                        &::after {
+                            transform: rotate(-45deg);
+                            top: 0;
+                            bottom: 0;
+                        }
+                    }
+                }
+            }
+            .logo {
+                max-width: 35%;
+                height: 40px;
+
+            }
+            .mb-login {
+                background-color: transparent;
+                border: 0;
+                outline: 0;
+                img {
+                    max-width: 25px;
+                    max-height: 25px;
+                }
+            }
+        }
+        .mb-menu {
+            width: 250px;
+            height: 100vh;
+            background-color: #0B5C9A;
+            color: #FFF;
+            padding: 0;
+            top: 0;
+            position: fixed;
+            z-index: 20000;
+            left: -250px;
+            transition: all .3s linear;
+            &.open {
+                left: 0;
+            }
+            .nav-list {
+                list-style: none;
+                .nav-item {
+                    border-bottom: 1px solid rgba(255,255,255,.8);
+                    .dropdown-text {
+                        display: flex;
+                        justify-content: space-between;
+                        margin-bottom: 0;
+                        i {
+                            padding: 15px 20px;
+                            font-size: 12px;
+                            line-height: 17px;
+                        }
+                    }
+                    .nav-link {
+                        color: #FFF;
+                        padding: 15px 20px;
+                        font-size: 12px;
+                    }
+                    &.my-dropdown {
+                        .my-dropdown-menu {
+                            list-style: none;
+                            transform: scale(1,0);
+                            transform-origin: top;
+                            position: absolute;
+                            width: 100%;
+                            transition: all .3s linear;
+                            &.open {
+                                position: relative;
+                                transform: scale(1,1);
+                            }
+                            .my-dropdown-item {
+                                border-bottom: #AAA;
+                                .dropdown-link {
+                                    background-color: #FFF;
+                                    color: $mainColor;
+                                    padding: 12px 20px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+//--------------------------//
+// END SITE NAVBAR
+//--------------------------//
+
+
+
+//--------------------------//
+// START FOOTER
+//--------------------------//
+
+footer {
+    #main-footer {
+        background-color: $mainColor;
+        color: #FFF;
+        padding: 50px 0 20px;
+        .footer-block {
+            margin-bottom: 30px;
+        }
+        .title {
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+        a {
+            color: #FFF;
+            font-size: 13px;
+            display: inline-block;
+            margin-bottom: 10px;
+            font-weight: 300;
+        }
+        .social-links {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            a {
+                display: inline-block;
+                img {
+                    max-width: 20px;
+                    max-height: 20px;
+                    margin: 0 auto;
+                }
+            }
+        }
+        #subscribe-form {
+            .form-group {
+                margin-bottom: 10px;
+                input {
+                    width: 100%;
+                    border: 0;
+                    border-radius: 30px;
+                    padding: 8px 30px 8px 20px;
+                    font-size: 14px;
+                    line-height: 20px;
+                    color: $mainColor;
+                    &::placeholder {
+                        color: #CCC;
+                    }
+                }
+                #subscribeBtn {
+                    border: 0;
+                    background: #FFF;
+                    position: absolute;
+                    right: 0;
+                    bottom: 0;
+                    color: #CCC;
+                    height: 36px;
+                    line-height: 36px;
+                    width: 30px;
+                    border-top-right-radius: 30px;
+                    border-bottom-right-radius: 30px;
+                    outline: 0;
+                }
+            }
+        }
+    }
+    #copyrights {
+        p {
+            margin-bottom: 0;
+            color: $mainColor;
+            padding: 10px 0;
+            .wasila {
+                font-weight: 700;
+                a {
+                    color: $mainColor;
+                }
+            }
+        }
+    }
+}
+
+//--------------------------//
+// END FOOTER
+//--------------------------//
+
+
+
+//--------------------------//
+// START USER NAVBAR
+//--------------------------//
+
+.user-navbar {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #FFF;
+    color: $mainColor;
+    font-size: 14px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10000;
+    .ws-nav {
+        position: relative;
+        .ws-nav-container {
+            align-items: center;
+            .logo {
+                max-width: 35%;
+                height: 40px;
+                .img-responsive {
+                    height: 40px;
+                }
+            }
+            .menu {
+                // width: 60%;
+                align-items: center;
+                .nav-menu, .nav-actions {
+                    .nav-list {
+                        list-style: none;
+                        margin-bottom: 0;
+                        .nav-item {
+                            display: inline-block;
+                            padding: 0 15px;
+                            position: relative;
+                            #exploreBtn {
+                                width: 160px;
+                            }
+                            .nav-link {
+                                display: block;
+                                background: transparent;
+                                border: 0;
+                                padding: 0;
+                                outline: 0;
+                                color: $mainColor;
+                                font-weight: 600;
+                                padding: 5px 0;
+                                img {
+                                    max-width: 18px;
+                                    max-height: 18px;
+                                    margin-right: 5px;
+                                    vertical-align: text-bottom;
+                                }
+                                &.publish {
+                                    background-color: $mainColor;
+                                    color: #FFF;
+                                    border-radius: 5px;
+                                    padding: 5px 10px;
+                                }
+                            }
+                            .user-btn {
+                                border: 0;
+                                background-color: transparent;
+                                outline: 0;
+                                color: $mainColor;
+                                .user-img {
+                                    img {
+                                        width: 50px;
+                                        height: 50px;
+                                        border-radius: 50%;
+                                    }
+                                    .user-name {
+                                        font-weight: 600;
+                                    }
+                                }
+                            }
+                            .notification-btn {
+                                font-size: 22px;
+                                &.open {
+                                    &::after {
+                                        content: '';
+                                        display: block;
+                                        width: 5px;
+                                        height: 15px;
+                                        position: absolute;
+                                        bottom: -30px;
+                                        left: 22px;
+                                        background-color: #FFF;
+                                    }
+                                }
+                                #notification_count {
+                                    display: flex;
+                                    font-size: 10px;
+                                    position: absolute;
+                                    top: 3px;
+                                    right: 10px;
+                                    border: 1px solid #C00;
+                                    color: #FFF;
+                                    background-color: #C00;
+                                    border-radius: 50%;
+                                    text-align: center;
+                                    width: 15px;
+                                    padding: 0;
+                                    height: 15px;
+                                    line-height: 15px;
+                                    justify-content: center;
+                                    align-items: center;
+                                }
+                            }
+                            .notification-list {
+                                position: absolute;
+                                width: 350px;
+                                right: 0;
+                                top: 62px;
+                                background-color: #FFF;
+                                border-radius: 5px;
+                                box-shadow: 0 3px 5px rgba(0,0,0,.2);
+                                transition: all .3s ease-in;
+                                transform-origin: 95% 0;
+                                &.hidden {
+                                    transform: scale(0,0);
+                                }
+                                &.shown {
+                                    transform: scale(1,1);
+                                }
+                                .header {
+                                    text-align: center;
+                                    border-bottom: 2px solid #eee;
+                                    padding: 10px;
+                                    color: #444;
+                                    font-weight: 700;
+                                    p {
+                                        margin-bottom: 0;
+                                    }
+                                }
+                                .last-notifications {
+                                    max-height: 270px;
+                                    overflow-y: auto;
+                                    &::-webkit-scrollbar-track {
+                                        -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.1);
+                                        border-radius: 10px;
+                                        background-color: #FFF;
+                                    }
+                    
+                                    &::-webkit-scrollbar {
+                                        width: 15px;
+                                        background-color: #FFF;
+                                    }
+                    
+                                    &::-webkit-scrollbar-thumb {
+                                        border-radius: 10px;
+                                        -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.1);
+                                        background-color: $mainColor;
+                                        border: 4px solid rgba(0, 0, 0, 0);
+                                        background-clip: padding-box;
+                                    }
+                                    &::-webkit-scrollbar-corner {
+                                        background-color: transparent;
+                                    }
+                                    .notification-item {
+                                        display: flex;
+                                        align-items: center;
+                                        justify-content: flex-start;
+                                        padding: 10px;
+                                        border-bottom: 2px solid #EEE;
+                                        color: #444;
+                                        &.new {
+                                            background-color: #F8F8F8;
+                                        }
+                                        .img {
+                                            width: 50px;
+                                            height: 50px;
+                                            border-radius: 50%;
+                                            overflow: hidden;
+                                            margin-right: 10px;
+                                            img {
+                                                min-width: 100%;
+                                                min-height: 100%;
+                                            }
+                                        }
+                                        .title {
+                                            font-size: 13px;
+                                            margin-bottom: 5px;
+                                        }
+                                        .date {
+                                            font-size: 11px;
+                                            margin-bottom: 0;
+                                        }
+                                    }
+                                }
+                            }
+                            .user-menu {
+                                position: absolute;
+                                background-color: #FFF;
+                                right: 0;
+                                top: 61px;
+                                transition: all .3s ease-in;
+                                transform-origin: 90% 0;
+                                border-radius: 5px;
+                                border-top-right-radius: 0;
+                                box-shadow: 0 3px 5px rgba(0,0,0,.2);
+                                &.hidden {
+                                    transform: scale(0,0);
+                                }
+                                &.shown {
+                                    transform: scale(1,1);
+                                }
+                                ul {
+                                    list-style: none;
+                                }
+                                .user-menu-item {
+                                    border-bottom: 2px solid #EEE;
+                                    background-color: #FFF;
+                                    transition: all .1s linear;
+                                    &:hover {
+                                        background-color: #FAFAFA;
+                                    }
+                                    .user-to-settings {
+                                        display: flex;
+                                        justify-content: flex-start;
+                                        align-items: center;
+                                        padding: 10px;
+                                        .user-img {
+                                            display: flex;
+                                            width: 50px;
+                                            height: 50px;
+                                            border-radius: 50%;
+                                            align-items: center;
+                                            justify-content: center;
+                                            margin-right: 10px;
+                                            img {
+                                                width: 100%;
+                                                min-height: 100%;
+                                            }
+                                        }
+                                        .user-info {
+                                            .user-fullname {
+                                                font-size: 14px;
+                                                font-weight: 600;
+                                                color: $mainColor;
+                                                margin-bottom: 5px;
+                                            }
+                                            .user-email {
+                                                color: #333;
+                                                margin-bottom: 0;
+                                                font-size: 13px;
+                                                font-weight: 600;
+                                            }
+                                        }
+                                    }
+                                    .user-menu-link {
+                                        display: flex;
+                                        justify-content: flex-start;
+                                        align-items: center;
+                                        padding: 10px 25px;
+                                        img {
+                                            max-width: 20px;
+                                            max-height: 20px;
+                                            margin-right: 20px;
+                                        }
+                                        span {
+                                            color: $mainColor;
+                                            font-size: 14px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .explore-menu {
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 68px;
+            transition: all .4s ease-in-out;
+            transform-origin: calc(35% + 60px) -25px;
+            background-color: rgba(255,255,255,.9);
+            @media (max-width: 1200px) {
+                transform-origin: calc(20% + 88px) -25px;
+            }
+            .indicator {
+                // content: '\f0d8';
+                // font-family: "Font Awesome 5 Free";
+                font-size: 30px;
+                width: 20px;
+                text-align: center;
+                font-weight: 900;
+                display: block;
+                position: absolute;
+                top: -27px;
+                color: rgba(255,255,255,.9);
+                left: calc(35% + 60px);
+                @media (max-width: 1200px) {
+                    left: calc(20% + 88px);
+                }
+            }
+            &.hidden {
+                transform: scale(0,0);
+            }
+            &.shown {
+                transform: scale(1,1);
+            }
+            .title {
+                padding: 15px;
+                margin-bottom: 0;
+                border-bottom: 1px solid $mainColor;
+                color: #333;
+                font-weight: 700;
+            }
+            .explore-menu-item {
+                color: #CCC;
+                background-color: #FFF;
+                border: 0;
+                border-bottom: 1px solid #CCC;
+                text-align: left;
+                padding: 15px;
+                padding-left: 50px;
+                outline: 0;
+                &.show-all {
+                    padding: 8px 8px 8px 50px;
+                    color: $mainColor;
+                }
+                &.active {
+                    border-left: 5px solid $mainColor;
+                    background-color: rgba(11,92,154,.9);
+                    color: #FFF;
+                }
+            }
+            .explore-panes {
+                overflow-y: auto;
+                &::-webkit-scrollbar-track {
+                    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.1);
+                    border-radius: 10px;
+                    background-color: #FFF;
+                }
+
+                &::-webkit-scrollbar {
+                    width: 15px;
+                    background-color: #FFF;
+                }
+
+                &::-webkit-scrollbar-thumb {
+                    border-radius: 10px;
+                    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.1);
+                    background-color: $mainColor;
+                    border: 4px solid rgba(0, 0, 0, 0);
+                    background-clip: padding-box;
+                }
+                &::-webkit-scrollbar-corner {
+                    background-color: transparent;
+                }
+                .pane-item {
+                    display: none;
+                    padding-top: 15px;
+                    padding-bottom: 15px;
+                    &.active {
+                        display: block;
+                    }
+                    .posts-container {
+                        padding: 0 10px;
+                        .post-container {
+                            padding: 0 10px;
+                        }
+                    }
+                    .post-content {
+                        padding: 15px;
+                        background-color: #FFF;
+                        border-radius: 5px;
+                        transition: all .2s linear;
+                        box-shadow: 0 0 10px rgba(0,0,0,.2);
+                        &:hover {
+                            box-shadow: 0 0 2px rgba(0,0,0,.3);
+                        }
+                        .post-category {
+                            font-size: 10px;
+                            color: #AAA;
+                            font-weight: 500;
+                            margin-bottom: 5px;
+                            span {
+                                border-bottom: 1px solid #AAA;
+                                padding-bottom: 5px;
+                            }
+                        }
+                        .post-date {
+                            font-size: 9px;
+                            color: $textGray;
+                            font-weight: 600;
+                            margin-bottom: 5px;
+                        }
+                        .post-title {
+                            font-weight: 700;
+                            color: #444;
+                            font-size: .9rem;
+                        }
+                        .post-author {
+                            font-size: 10px;
+                            color: $textGray;
+                            font-weight: 900;
+                            display: flex;
+                            margin-bottom: 10px;
+                            .author-name {
+
+                            }
+                            .line {
+                                border: 1px solid #AAA;
+                                height: 1px;
+                                margin-top: 7px;
+                                margin-left: 3px;
+                                flex: 1;
+                            }
+                        }
+                        .post-excerpt {
+                            font-size: 12px;
+                            line-height: 14px;
+                            color: #BBB;
+                            margin-bottom: 10px;
+                        }
+                        .post-link {
+                            font-weight: 600;
+                            margin-bottom: 0;
+                            font-size: 12px;
+                            a {
+                                color: $mainColor;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .mb-nav {
+        .mb-nav-container {
+            justify-content: space-between;
+            .burger-menu-btn {
+                background-color: transparent;
+                border: 0;
+                outline: 0;
+                position: relative;
+                left: 0;
+                z-index: 20000;
+                transition: all .3s linear;
+                %bar-style {
+                    width: 30px;
+                    height: 2px;
+                    background-color: #777;
+                    display: block;
+                }
+                .burger-menu-bars {
+                    @extend %bar-style;
+                    position: relative;
+                    transition: all .3s linear;
+                    &::before {
+                        content: '';
+                        @extend %bar-style;
+                        position: absolute;
+                        bottom: 10px;
+                        
+                    }
+                    &::after {
+                        content: '';
+                        @extend %bar-style;
+                        position: absolute;
+                        top: 10px;
+                    }
+                }
+                &.menu-open {
+                    left: 220px;
+                    @media (max-width: 650px) {
+                        left: 270px;
+                    }
+                    .burger-menu-bars {
+                        height: 0;
+                        &::before {
+                            transform: rotate(45deg);
+                            top: 0;
+                            bottom: 0;
+                        }
+                        &::after {
+                            transform: rotate(-45deg);
+                            top: 0;
+                            bottom: 0;
+                        }
+                    }
+                }
+            }
+            .logo {
+                max-width: 35%;
+                height: 40px;
+
+            }
+            .mb-login {
+                background-color: transparent;
+                border: 0;
+                outline: 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                img {
+                    max-width: 25px;
+                    max-height: 25px;
+                }
+            }
+        }
+        .mb-menu {
+            width: 250px;
+            height: 100vh;
+            background-color: #0B5C9A;
+            color: #FFF;
+            padding: 0;
+            top: 0;
+            position: fixed;
+            z-index: 20000;
+            left: -250px;
+            transition: all .3s linear;
+            &.open {
+                left: 0;
+            }
+            .nav-list {
+                list-style: none;
+                .nav-item {
+                    border-bottom: 1px solid rgba(255,255,255,.8);
+                    .dropdown-text {
+                        display: flex;
+                        justify-content: space-between;
+                        margin-bottom: 0;
+                        i {
+                            padding: 15px 20px;
+                            font-size: 12px;
+                            line-height: 17px;
+                        }
+                    }
+                    .nav-link {
+                        color: #FFF;
+                        padding: 15px 20px;
+                        font-size: 12px;
+                    }
+                    &.my-dropdown {
+                        .my-dropdown-menu {
+                            list-style: none;
+                            transform: scale(1,0);
+                            transform-origin: top;
+                            position: absolute;
+                            width: 100%;
+                            transition: all .3s linear;
+                            &.open {
+                                position: relative;
+                                transform: scale(1,1);
+                            }
+                            .my-dropdown-item {
+                                border-bottom: #AAA;
+                                .dropdown-link {
+                                    background-color: #FFF;
+                                    color: $mainColor;
+                                    padding: 12px 20px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+//--------------------------//
+// END USER NAVBAR
+//--------------------------//

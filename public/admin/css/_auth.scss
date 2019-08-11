@@ -1,0 +1,97 @@
+// Login Page
+.login-page {
+    // background-image: url(../images/Login_Page_background.jpg);
+    // background-size: 100% 100%;
+    background: rgb(43, 43, 198);
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+    outline: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    form {
+        background-color: #fff;
+        border-radius: 10px;
+        padding: 0 20px;
+        min-height: calc(100% - (1.75rem * 2));
+        position: relative;
+        overflow-y: auto;
+        .header {
+            padding: 15px;
+            border-bottom: 1px solid #eee;
+            .icon {
+                width: 30px;
+                img {
+                    max-width: 100%;
+                    width: auto;
+                    height: auto;
+                }
+            }
+            .title {
+                color: $mainColor;
+                font-weight: 900;
+                margin-bottom: 0;
+            }
+        }
+        .body {
+            padding: 15px;
+            .form-group {
+                position: relative;
+                margin-bottom: 10px;
+                padding-bottom: 15px;
+                label {
+                    font-weight: 900;
+                    font-size: 16px;
+                    color: $textGray;
+                    width: 100%;
+                }
+                input {
+                    width: 100%;
+                    border: 0;
+                    background-color: #eee;
+                    color: $mainColor;
+                    font-weight: 600;
+                    border-radius: 5px;
+                    margin-bottom: 0;
+                    font-size: 16px;
+                    padding: 7px 20px;
+                    outline: 0;
+                }
+                .forgot-password {
+                    float: right;
+                    color: $textGray;
+                    font-weight: 700;
+                    font-size: 14px;
+                    text-decoration: underline;
+                }
+            }
+            .btn {
+                color: #fff;
+                background: linear-gradient(to right, $secColor, $lightColor);
+                width: 100%;
+                font-weight: 900;
+                padding: 10px;
+                opacity: 1;
+                transition: all 0.1s linear;
+                &:hover {
+                    opacity: 0.95;
+                }
+            }
+        }
+        .footer {
+            padding: 15px;
+            border-top: 1px solid #eee;
+            text-align: center;
+            p {
+                width: 100%;
+                margin-bottom: 0;
+                color: $textGray;
+            }
+        }
+    }
+}

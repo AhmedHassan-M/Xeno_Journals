@@ -1,0 +1,211 @@
+.dataTables_wrapper {
+    flex: 1;
+    
+    
+    // LENGTH COLOR
+    .dataTables_length {
+        label {
+            color: $mainColor;
+        }
+    }
+    // SEARCH STYLE
+    .dataTables_filter {
+        position: relative;
+        label {
+            color: transparent;
+            width: 250px;
+            height: 30px;
+            position: relative;
+        }
+        input {
+            width: 250px !important;
+            height: 30px;
+            position: absolute;
+            left: 0;
+            margin-left: 0 !important;
+            &::placeholder {
+                color: #ccc;
+            }
+        }
+        i {
+            position: absolute;
+            color: #ccc;
+            right: 10px;
+            font-size: 15px;
+            line-height: 20px;
+            top: 5px;
+        }
+    }
+    
+    // START ACTION LIST STYLE
+    .actions-div {
+        clear: both;
+        padding: 0 10px;
+        background-color: #FFF;
+        height: 80px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        border-bottom: 2px solid #ddd;
+        .custom-checkbox {
+            margin-left: 1.5rem;
+        }
+        .custom-control-label {
+            line-height: 1.5rem;
+            cursor: pointer;
+            color: $mainColor;
+            font-weight: 900;
+            &::before {
+                background-color: #FFF;
+                box-shadow: 0 0 2px rgba(0,0,0,.5);
+                outline: 0;
+            }
+        }
+        .custom-control-input:focus ~ .custom-control-label::before {
+            box-shadow: 0 0 2px rgba(0,0,0,.5);
+        }
+        .custom-select {
+            width: auto;
+            min-width: 80px;
+            height: 100%;
+            border: 0;
+            border-radius: 0;
+            color: $mainColor;
+            font-weight: 900;
+            cursor: pointer;
+            background: #FFF url("../images/angle-down-solid-blue.svg") no-repeat right 0.75rem center;
+            background-size: 9px !important;
+            padding: 0.375rem 1rem 0.375rem 0.75rem;
+            &:hover {
+                background-color: $lGray;
+            }
+            &:focus {
+                box-shadow: 0 0 0 rgba(0,0,0,0);
+            }
+        }
+        .button {
+            display: inline-block;
+            padding: 0 20px;
+            .btn {
+                background-color: #FFF;
+                border: 1px solid $mainColor;
+                color: $mainColor;
+                padding: 5px 30px;
+                &:hover, &:focus {
+                    text-decoration: none;
+                    transform: translate3d(0, 0, 0);
+                    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+                }
+                &:hover {
+                    color: #FFF;
+                    background-color: $mainColor;
+                }
+            }
+        }
+        .btn-secondary {
+            background-color: $mainColor;
+            border-color: $mainColor;
+        }
+    }
+    // END ACTION LIST STYLE
+    
+    // START TD CONTENT 
+    tbody {
+        tr td {
+            p {
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+// TABLE 
+table.dataTable {
+    // table background
+    background-color: #FFF;
+    // remove table top margin to mix it with the actions list div
+    margin-top: 0 !important;
+    // table header color
+    thead tr th {
+        color: $mainColor;
+    }
+}
+
+// PAGINATION
+.page-item:first-child .page-link {
+    border-top-left-radius: 1.25rem;
+    border-bottom-left-radius: 1.25rem;
+}
+.page-item:last-child .page-link {
+    border-top-right-radius: 1.25rem;
+    border-bottom-right-radius: 1.25rem;
+}
+
+// SORTING ARROWS
+//table.dataTable thead .sorting {
+//    background-image: url(../images/sort_both.png);
+//}
+//table.dataTable thead .sorting_asc {
+//    background-image: url(../images/sort_asc.png);
+//}
+//table.dataTable thead .sorting_desc {
+//    background-image: url(../images/sort_desc.png);
+//}
+table.dataTable thead .sorting, table.dataTable thead .sorting_asc, table.dataTable thead .sorting_desc, table.dataTable thead .sorting_asc_disabled, table.dataTable thead .sorting_desc_disabled {
+    cursor: pointer;
+    background-repeat: no-repeat;
+    background-position: center right;
+    &::before {
+        content: '';
+    }
+    &::after {
+        content: '';
+    }
+}
+
+// SORTING CELL COLOR 
+table.dataTable.display tbody>tr.even.selected>.sorting_1, table.dataTable.order-column.stripe tbody>tr.even.selected>.sorting_1, table.dataTable.display tbody>tr.odd.selected>.sorting_1, table.dataTable.order-column.stripe tbody>tr.odd.selected>.sorting_1 {
+    background-color: transparent;
+}
+
+// SELECT CHECKBOX
+table.dataTable {
+    .custom-control-label {
+        width: 1rem;
+        height: 1rem;
+        cursor: pointer;
+        &::before {
+            background-color: #FFF;
+            box-shadow: 0 0 2px rgba(0,0,0,.5);
+            outline: 0;
+        }
+        &::before, &::after {
+            top: 0;
+            left: 0;
+        }
+    }
+    .custom-control-input:focus ~ .custom-control-label::before {
+        box-shadow: 0 0 2px rgba(0,0,0,.5);
+    }
+    .red-status {
+        color: #A00;
+    }
+    .yellow-status {
+        color: #AA0;
+    }
+    .green-status {
+        color: #0A0;
+    }
+}
+
+// SMAlLER FONT SIZE TABLES
+.f-14-table {
+    thead th, tbody td {
+        font-size: 14px;
+    }
+    .show-more-btn {
+        text-decoration: underline;
+        min-width: 75px;
+        display: block;
+    }
+}
